@@ -8,7 +8,7 @@ __author__ = 'ramessne'
 app = Flask("webapp")
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////home/ramessne/ansible-playbooks/database.db'
 app.config['CELERY_BROKER_URL'] = 'amqp://guest:guest@localhost:5672//'
-app.config['SQLALCHEMY_ECHO'] = 'True'
+# app.config['SQLALCHEMY_ECHO'] = 'True'
 # TODO ajouter a la config le chemin des playbooks
 # TODO ajouter a la config le chemin des logs
 
