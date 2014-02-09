@@ -1,0 +1,9 @@
+---
+- hosts: local
+  tasks:
+  - name: Debug un message
+    debug: msg="Mon message"
+  - name: attente
+    wait_for: path=/home/ramessne/ansible-playbooks/hosts delay=30 timeout=60
+  - name: another message
+    debug: msg="another message"

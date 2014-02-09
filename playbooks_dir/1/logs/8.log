@@ -1,0 +1,33 @@
+
+PLAY [local] ****************************************************************** 
+
+GATHERING FACTS *************************************************************** 
+<localhost> ESTABLISH CONNECTION FOR USER: ramessne on PORT 22 TO localhost
+<localhost> EXEC /bin/sh -c 'mkdir -p $HOME/.ansible/tmp/ansible-1391952484.29-45874980983211 && chmod a+rx $HOME/.ansible/tmp/ansible-1391952484.29-45874980983211 && echo $HOME/.ansible/tmp/ansible-1391952484.29-45874980983211'
+<localhost> REMOTE_MODULE setup 
+<localhost> PUT /tmp/tmpO6MVwC TO /home/ramessne/.ansible/tmp/ansible-1391952484.29-45874980983211/setup
+<localhost> EXEC /bin/sh -c '/usr/bin/python /home/ramessne/.ansible/tmp/ansible-1391952484.29-45874980983211/setup; rm -rf /home/ramessne/.ansible/tmp/ansible-1391952484.29-45874980983211/ >/dev/null 2>&1'
+ok: [localhost]
+
+TASK: [Debug un message] ****************************************************** 
+<localhost> ESTABLISH CONNECTION FOR USER: ramessne on PORT 22 TO localhost
+ok: [localhost] => {
+    "msg": "Mon message"
+}
+
+TASK: [attente] *************************************************************** 
+<localhost> ESTABLISH CONNECTION FOR USER: ramessne on PORT 22 TO localhost
+<localhost> EXEC /bin/sh -c 'mkdir -p $HOME/.ansible/tmp/ansible-1391952486.19-30301173118928 && chmod a+rx $HOME/.ansible/tmp/ansible-1391952486.19-30301173118928 && echo $HOME/.ansible/tmp/ansible-1391952486.19-30301173118928'
+<localhost> REMOTE_MODULE wait_for path=/home/ramessne/ansible-playbooks/hosts delay=30 timeout=60
+<localhost> PUT /tmp/tmprAPAJz TO /home/ramessne/.ansible/tmp/ansible-1391952486.19-30301173118928/wait_for
+<localhost> EXEC /bin/sh -c '/usr/bin/python /home/ramessne/.ansible/tmp/ansible-1391952486.19-30301173118928/wait_for; rm -rf /home/ramessne/.ansible/tmp/ansible-1391952486.19-30301173118928/ >/dev/null 2>&1'
+failed: [localhost] => {"elapsed": 60, "failed": true}
+msg: Timeout when waiting for file /home/ramessne/ansible-playbooks/hosts
+
+FATAL: all hosts have already failed -- aborting
+
+PLAY RECAP ******************************************************************** 
+           to retry, use: --limit @/home/ramessne/site.retry
+
+localhost                  : ok=2    changed=0    unreachable=0    failed=1   
+
