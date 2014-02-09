@@ -8,7 +8,7 @@ db.create_all()
 
 from webapp.model.user import User
 
-admin = User("admin","admin")
+admin = User("admin@admin.com","admin")
 db.session.add(admin)
 db.session.commit()
 
