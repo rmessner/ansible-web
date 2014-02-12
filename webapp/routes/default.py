@@ -1,5 +1,5 @@
 import json
-from flask import render_template, jsonify
+from flask import render_template, jsonify, send_file
 from flask.globals import request
 from webapp import app
 from webapp.model.user import User
@@ -9,7 +9,8 @@ __author__ = 'ramessne'
 
 @app.route('/')
 def index(name=None):
-    return render_template('index.html')
+    #return render_template('index.html')
+    return send_file('templates/index.html')
 
 @app.route('/login')
 def login():

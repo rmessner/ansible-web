@@ -3,10 +3,10 @@ PLAY [local] ******************************************************************
 
 GATHERING FACTS *************************************************************** 
 <localhost> ESTABLISH CONNECTION FOR USER: ramessne on PORT 22 TO localhost
-<localhost> EXEC /bin/sh -c 'mkdir -p $HOME/.ansible/tmp/ansible-1391962964.49-203530403977907 && chmod a+rx $HOME/.ansible/tmp/ansible-1391962964.49-203530403977907 && echo $HOME/.ansible/tmp/ansible-1391962964.49-203530403977907'
+<localhost> EXEC /bin/sh -c 'mkdir -p $HOME/.ansible/tmp/ansible-1392230888.42-28517066345112 && chmod a+rx $HOME/.ansible/tmp/ansible-1392230888.42-28517066345112 && echo $HOME/.ansible/tmp/ansible-1392230888.42-28517066345112'
 <localhost> REMOTE_MODULE setup 
-<localhost> PUT /tmp/tmp1TD1Pt TO /home/ramessne/.ansible/tmp/ansible-1391962964.49-203530403977907/setup
-<localhost> EXEC /bin/sh -c '/usr/bin/python /home/ramessne/.ansible/tmp/ansible-1391962964.49-203530403977907/setup; rm -rf /home/ramessne/.ansible/tmp/ansible-1391962964.49-203530403977907/ >/dev/null 2>&1'
+<localhost> PUT /tmp/tmpEqkANq TO /home/ramessne/.ansible/tmp/ansible-1392230888.42-28517066345112/setup
+<localhost> EXEC /bin/sh -c '/usr/bin/python /home/ramessne/.ansible/tmp/ansible-1392230888.42-28517066345112/setup; rm -rf /home/ramessne/.ansible/tmp/ansible-1392230888.42-28517066345112/ >/dev/null 2>&1'
 ok: [localhost]
 
 TASK: [Debug un message] ****************************************************** 
@@ -17,10 +17,10 @@ ok: [localhost] => {
 
 TASK: [attente] *************************************************************** 
 <localhost> ESTABLISH CONNECTION FOR USER: ramessne on PORT 22 TO localhost
-<localhost> EXEC /bin/sh -c 'mkdir -p $HOME/.ansible/tmp/ansible-1391962966.03-146919139416106 && chmod a+rx $HOME/.ansible/tmp/ansible-1391962966.03-146919139416106 && echo $HOME/.ansible/tmp/ansible-1391962966.03-146919139416106'
+<localhost> EXEC /bin/sh -c 'mkdir -p $HOME/.ansible/tmp/ansible-1392230890.41-167652487595629 && chmod a+rx $HOME/.ansible/tmp/ansible-1392230890.41-167652487595629 && echo $HOME/.ansible/tmp/ansible-1392230890.41-167652487595629'
 <localhost> REMOTE_MODULE wait_for path=/home/ramessne/ansible-playbooks/hosts delay=30 timeout=60
-<localhost> PUT /tmp/tmp_LGBVF TO /home/ramessne/.ansible/tmp/ansible-1391962966.03-146919139416106/wait_for
-<localhost> EXEC /bin/sh -c '/usr/bin/python /home/ramessne/.ansible/tmp/ansible-1391962966.03-146919139416106/wait_for; rm -rf /home/ramessne/.ansible/tmp/ansible-1391962966.03-146919139416106/ >/dev/null 2>&1'
+<localhost> PUT /tmp/tmpeup1nr TO /home/ramessne/.ansible/tmp/ansible-1392230890.41-167652487595629/wait_for
+<localhost> EXEC /bin/sh -c '/usr/bin/python /home/ramessne/.ansible/tmp/ansible-1392230890.41-167652487595629/wait_for; rm -rf /home/ramessne/.ansible/tmp/ansible-1392230890.41-167652487595629/ >/dev/null 2>&1'
 failed: [localhost] => {"elapsed": 60, "failed": true}
 msg: Timeout when waiting for file /home/ramessne/ansible-playbooks/hosts
 

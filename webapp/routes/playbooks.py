@@ -21,6 +21,14 @@ def detail_playbook(name=None):
     result = Playbook.query.filter_by(name=name).first()
     return jsonify(playbook=result.getDict())
 
+@app.route('/playbooks/<name>/history')
+def history_playbook(name=None):
+    playbook = Playbook.query.filter_by(name=name).first()
+    result = []
+    for item in playbook.executions:
+      result.append(item.getDict())
+    return jsonify(histories=result)
+
 @app.route('/playbooks/<name>/update')
 def update_playbook(name=None):
     flask.abort(404)
