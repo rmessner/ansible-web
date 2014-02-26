@@ -2,6 +2,7 @@ from celery_init import make_celery
 from flask_sqlalchemy import SQLAlchemy
 from flask import Flask, render_template, jsonify
 
+
 __author__ = 'ramessne'
 
 # Definition de l application

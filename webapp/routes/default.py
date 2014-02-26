@@ -4,6 +4,7 @@ from flask.globals import request
 from webapp import app
 from webapp.model.user import User
 from webapp.tasks import playbook
+from webapp.jsonp_helper import support_jsonp
 
 __author__ = 'ramessne'
 
@@ -13,6 +14,7 @@ def index(name=None):
     return send_file('templates/index.html')
 
 @app.route('/login')
+@support_jsonp
 def login():
     result = None
     email = request.args["email"]
